@@ -22,7 +22,7 @@ commands:
     run: bundle exec rake
   watch:
     desc: Watch the path to enlightenment (run the koans whenever you edit them)
-    run: bundle exec observr ./koans/koans.watchr
+    run: bundle exec rake && bundle exec observr ./koans/koans.watchr
 
 open:
   koans: http://rubykoans.com/ # No, it doesn't support HTTPS...
