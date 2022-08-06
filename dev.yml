@@ -1,0 +1,28 @@
+name: ruby-koans
+
+type: ruby
+
+up:
+  - ruby: 3.1.2
+  - bundler
+  - custom:
+      name: Generate Koans
+      met?: test -d koans
+      meet: bundle exec rake gen
+
+commands:
+  regenerate:
+    desc: Renegerate koans directory
+    run: bundle exec rake regen
+  delete:
+    desc: Delete the koans directory and all its contents
+    run: bundle exec rake clobber_koans
+  test:
+    desc: Take the path to enlightenment (run the koans)
+    run: bundle exec rake
+  watch:
+    desc: Watch the path to enlightenment (run the koans whenever you edit them)
+    run: bundle exec rake && bundle exec observr ./koans/koans.watchr
+
+open:
+  koans: http://rubykoans.com/ # No, it doesn't support HTTPS...

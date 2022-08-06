@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    observr (1.0.5)
+    rake (13.0.6)
+
+PLATFORMS
+  arm64-darwin-21
+
+DEPENDENCIES
+  observr
+  rake
+
+BUNDLED WITH
+   2.3.15
